@@ -88,6 +88,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Amazon\Demo.cs" />
+    <Compile Include="Amazon\Question1.cs" />
+    <Compile Include="Amazon\Question2.cs" />
     <Compile Include="Codility\Lessons\BinaryGap.cs" />
     <Compile Include="Codility\Demo.cs" />
     <Compile Include="Codility\FrogJmp.cs" />

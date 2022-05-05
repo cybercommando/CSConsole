@@ -1,6 +1,6 @@
 using System;
 
-namespace RepositoryAPI
+namespace IoTDevice
 {
     public class WeatherForecast
     {

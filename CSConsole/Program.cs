@@ -140,7 +140,7 @@ namespace CSConsole
         static void Main(string[] args)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
-            Console.Write( Amazon.Demo.GCD(new int[] { 2, 4, 6, 8, 10 }, 5));
+            Console.Write( Amazon.Question1.countDecreasingRatings(new int[] { 4,2,3,1 }));
             stopwatch.Stop();
             Console.WriteLine("Ex. time: {0}", stopwatch.Elapsed.TotalMilliseconds);
             Console.WriteLine("---------------------");
