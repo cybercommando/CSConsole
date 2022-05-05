@@ -1,4 +1,5 @@
-﻿using IoTDevice.Models;
+﻿using IoTDevice.Entities;
+using IoTDevice.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -12,8 +13,8 @@ namespace IoTDevice.Repository
 
         Task DeleteDevice(int id);
 
-        Task<IEnumerable<Device>> GetDevices();
+        Task<IEnumerable<DeviceModel>> GetDevices();
 
-        Task<Device> GetDevice(int id);
+        Task<DeviceModel> GetDevice(int id);
     }
 }

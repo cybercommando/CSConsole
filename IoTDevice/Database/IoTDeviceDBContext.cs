@@ -1,4 +1,4 @@
-﻿using IoTDevice.Models;
+﻿using IoTDevice.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 

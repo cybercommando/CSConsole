@@ -1,5 +1,5 @@
 ﻿using IoTDevice.Database;
-using IoTDevice.Models;
+using IoTDevice.Entities;
 using IoTDevice.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

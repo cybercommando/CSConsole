@@ -1,8 +1,10 @@
 ﻿using IoTDevice.Database;
+using IoTDevice.Entities;
 using IoTDevice.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace IoTDevice.Repository
 {
@@ -33,14 +35,23 @@ namespace IoTDevice.Repository
             }
         }
 
-        public async Task<Device> GetDevice(int id)
+        public async Task<DeviceModel> GetDevice(int id)
         {
-            return await ioTDeviceDBContext.devices.FindAsync(id);
+            var device = await ioTDeviceDBContext.devices.FindAsync(id);
+            if (device != null)
+            {
+                return new DeviceModel().DeviceModelFrom(device);
+            }
+            else
+            {
+                return null;
+            }
         }
 
-        public async Task<IEnumerable<Device>> GetDevices()
+        public async Task<IEnumerable<DeviceModel>> GetDevices()
         {
-            return await ioTDeviceDBContext.devices.ToListAsync();
+            var devices = await ioTDeviceDBContext.devices.ToListAsync();
+            return devices.Select(d => new DeviceModel().DeviceModelFrom(d));
         }
 
         public async Task UpdateDevice(Device device)
